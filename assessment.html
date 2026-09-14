@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kế hoạch sức khỏe | VITAL-Đại Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo-block">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="10" fill="#E8791A"/>
+        <g stroke="#E8791A" stroke-width="2" stroke-linecap="round">
+          <line x1="20" y1="2" x2="20" y2="7"/>
+          <line x1="20" y1="33" x2="20" y2="38"/>
+          <line x1="2" y1="20" x2="7" y2="20"/>
+          <line x1="33" y1="20" x2="38" y2="20"/>
+          <line x1="7.5" y1="7.5" x2="10.8" y2="10.8"/>
+          <line x1="29.2" y1="29.2" x2="32.5" y2="32.5"/>
+          <line x1="32.5" y1="7.5" x2="29.2" y2="10.8"/>
+          <line x1="10.8" y1="29.2" x2="7.5" y2="32.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="logo">VITAL<span>—</span>Đại Nam</div>
+        <div class="logo-sub" data-vi>Trực thuộc Đại học Đại Nam</div>
+        <div class="logo-sub" data-en>Affiliated with Dai Nam University</div>
+      </div>
+    </a>
+    <nav>
+      <a href="assessment.html" class="nav-vi active" data-vi>Kế hoạch sức khỏe</a><a href="assessment.html" class="nav-en active" data-en>Health plan</a>
+      <a href="clinic.html" class="nav-vi" data-vi>Phòng khám</a><a href="clinic.html" class="nav-en" data-en>Clinic</a>
+      <a href="research.html" class="nav-vi" data-vi>Nghiên cứu</a><a href="research.html" class="nav-en" data-en>Research</a>
+      <a href="blog.html" class="nav-vi" data-vi>Bài viết</a><a href="blog.html" class="nav-en" data-en>Blog</a>
+      <a href="contact.html" class="nav-vi" data-vi>Liên hệ</a><a href="contact.html" class="nav-en" data-en>Contact</a>
+    </nav>
+    <div class="lang-toggle">
+      <button id="btn-vi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow" data-vi>KẾ HOẠCH SỨC KHỎE</div>
+    <div class="eyebrow" data-en>HEALTH PLAN</div>
+    <h1 data-vi>Nhận gợi ý sức khỏe cá nhân hóa</h1>
+    <h1 data-en>Get your personalized health plan</h1>
+    <p class="lead" data-vi>Trả lời vài câu hỏi ngắn để nhận gợi ý về lối sống, dựa trên bằng chứng khoa học, để trao đổi thêm với bác sĩ của bạn.</p>
+    <p class="lead" data-en>Answer a few short questions to get evidence-based lifestyle suggestions to discuss with your doctor.</p>
+  </div>
+</section>
+
+<section id="assessment" class="assess">
+  <div class="wrap">
+    <div class="assess-card">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <div class="step active" data-step="1">
+        <div class="q-label" data-vi>Thông tin cơ bản</div>
+        <div class="q-label" data-en>Basic information</div>
+        <div class="row-2">
+          <div class="field-sm">
+            <label data-vi>Tuổi</label><label data-en>Age</label>
+            <input type="number" id="q-age" min="18" max="100" placeholder="35">
+          </div>
+          <div class="field-sm">
+            <label data-vi>Giới tính sinh học</label><label data-en>Biological sex</label>
+            <select id="q-sex">
+              <option value="" data-vi>Chọn</option><option value="" data-en>Select</option>
+              <option value="female" data-vi>Nữ</option><option value="female" data-en>Female</option>
+              <option value="male" data-vi>Nam</option><option value="male" data-en>Male</option>
+            </select>
+          </div>
+        </div>
+        <div class="assess-error" id="err-1" data-vi>Vui lòng nhập tuổi và chọn giới tính.</div>
+        <div class="assess-error" id="err-1-en" data-en>Enter your age and select a sex.</div>
+        <div class="step-nav">
+          <span></span>
+          <button type="button" class="btn btn-primary" onclick="nextStep(1)" data-vi>Tiếp tục</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep(1)" data-en>Continue</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="q-label" data-vi>Mục tiêu sức khỏe của bạn là gì? (chọn nhiều)</div>
+        <div class="q-label" data-en>What are your health goals? (select all that apply)</div>
+        <div class="chip-group" id="goal-chips">
+          <div class="chip" data-value="weight"><span data-vi>Kiểm soát cân nặng</span><span data-en>Weight management</span></div>
+          <div class="chip" data-value="energy"><span data-vi>Tăng năng lượng</span><span data-en>More energy</span></div>
+          <div class="chip" data-value="sleep"><span data-vi>Ngủ ngon hơn</span><span data-en>Better sleep</span></div>
+          <div class="chip" data-value="heart"><span data-vi>Sức khỏe tim mạch</span><span data-en>Heart health</span></div>
+          <div class="chip" data-value="strength"><span data-vi>Tăng sức mạnh cơ bắp</span><span data-en>Build strength</span></div>
+          <div class="chip" data-value="longevity"><span data-vi>Lão hóa khỏe mạnh</span><span data-en>Healthy aging</span></div>
+        </div>
+        <div class="assess-error" id="err-2" data-vi>Vui lòng chọn ít nhất một mục tiêu.</div>
+        <div class="assess-error" id="err-2-en" data-en>Select at least one goal.</div>
+        <div class="step-nav">
+          <button type="button" class="btn-link" onclick="prevStep(2)" data-vi>Quay lại</button>
+          <button type="button" class="btn-link" onclick="prevStep(2)" data-en>Back</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep(2)" data-vi>Tiếp tục</button>
+          <button type="button" class="btn btn-primary" onclick="nextStep(2)" data-en>Continue</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="3">
+        <div class="q-label" data-vi>Thói quen sống hiện tại</div>
+        <div class="q-label" data-en>Current lifestyle habits</div>
+        <div class="row-2">
+          <div class="field-sm">
+            <label data-vi>Giờ ngủ mỗi đêm</label><label data-en>Hours of sleep per night</label>
+            <select id="q-sleep">
+              <option value="lt5" data-vi>Dưới 5 giờ</option><option value="lt5" data-en>Less than 5</option>
+              <option value="5to7" data-vi>5–7 giờ</option><option value="5to7" data-en>5–7 hours</option>
+              <option value="7to9" data-vi>7–9 giờ</option><option value="7to9" data-en>7–9 hours</option>
+              <option value="gt9" data-vi>Trên 9 giờ</option><option value="gt9" data-en>More than 9</option>
+            </select>
+          </div>
+          <div class="field-sm">
+            <label data-vi>Tập thể dục mỗi tuần</label><label data-en>Exercise sessions per week</label>
+            <select id="q-exercise">
+              <option value="0" data-vi>Không tập</option><option value="0" data-en>None</option>
+              <option value="1to2" data-vi>1–2 lần</option><option value="1to2" data-en>1–2 times</option>
+              <option value="3to4" data-vi>3–4 lần</option><option value="3to4" data-en>3–4 times</option>
+              <option value="5plus" data-vi>5 lần trở lên</option><option value="5plus" data-en>5 or more</option>
+            </select>
+          </div>
+        </div>
+        <div class="assess-error" id="err-3" data-vi>Vui lòng chọn cả hai mục.</div>
+        <div class="assess-error" id="err-3-en" data-en>Please answer both questions.</div>
+        <div class="step-nav">
+          <button type="button" class="btn-link" onclick="prevStep(3)" data-vi>Quay lại</button>
+          <button type="button" class="btn-link" onclick="prevStep(3)" data-en>Back</button>
+          <button type="button" class="btn btn-primary" onclick="showResults()" data-vi>Xem gợi ý</button>
+          <button type="button" class="btn btn-primary" onclick="showResults()" data-en>See my plan</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="4">
+        <div class="q-label" data-vi>Gợi ý dành cho bạn</div>
+        <div class="q-label" data-en>Your suggestions</div>
+        <div class="results-list" id="results-list"></div>
+        <div class="assess-disclaimer" data-vi>Đây là gợi ý mang tính giáo dục, không phải chẩn đoán y khoa. Vui lòng trao đổi với bác sĩ trước khi thay đổi thói quen sinh hoạt hoặc điều trị.</div>
+        <div class="assess-disclaimer" data-en>These are educational suggestions, not a medical diagnosis. Please discuss any changes with your doctor before acting on them.</div>
+        <div class="step-nav">
+          <button type="button" class="btn-link" onclick="restartAssessment()" data-vi>Làm lại</button>
+          <button type="button" class="btn-link" onclick="restartAssessment()" data-en>Start over</button>
+          <a href="contact.html" class="btn btn-primary" data-vi>Đặt lịch với bác sĩ</a>
+          <a href="contact.html" class="btn btn-primary" data-en>Book with a doctor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 VITAL-Đại Nam</div>
+    <div class="footer-links">
+      <a href="#" data-vi>Chính sách bảo mật</a><a href="#" data-en>Privacy policy</a>
+      <a href="#" data-vi>Điều khoản</a><a href="#" data-en>Terms</a>
+      <a href="https://dainam.edu.vn/vi" target="_blank" data-vi>Đại học Đại Nam ↗</a>
+      <a href="https://dainam.edu.vn/en" target="_blank" data-en>Dai Nam University ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="assessment.js"></script>
+</body>
+</html>

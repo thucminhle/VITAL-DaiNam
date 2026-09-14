@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phòng khám | VITAL-Đại Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo-block">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="10" fill="#E8791A"/>
+        <g stroke="#E8791A" stroke-width="2" stroke-linecap="round">
+          <line x1="20" y1="2" x2="20" y2="7"/>
+          <line x1="20" y1="33" x2="20" y2="38"/>
+          <line x1="2" y1="20" x2="7" y2="20"/>
+          <line x1="33" y1="20" x2="38" y2="20"/>
+          <line x1="7.5" y1="7.5" x2="10.8" y2="10.8"/>
+          <line x1="29.2" y1="29.2" x2="32.5" y2="32.5"/>
+          <line x1="32.5" y1="7.5" x2="29.2" y2="10.8"/>
+          <line x1="10.8" y1="29.2" x2="7.5" y2="32.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="logo">VITAL<span>—</span>Đại Nam</div>
+        <div class="logo-sub" data-vi>Trực thuộc Đại học Đại Nam</div>
+        <div class="logo-sub" data-en>Affiliated with Dai Nam University</div>
+      </div>
+    </a>
+    <nav>
+      <a href="assessment.html" class="nav-vi" data-vi>Kế hoạch sức khỏe</a><a href="assessment.html" class="nav-en" data-en>Health plan</a>
+      <a href="clinic.html" class="nav-vi active" data-vi>Phòng khám</a><a href="clinic.html" class="nav-en active" data-en>Clinic</a>
+      <a href="research.html" class="nav-vi" data-vi>Nghiên cứu</a><a href="research.html" class="nav-en" data-en>Research</a>
+      <a href="blog.html" class="nav-vi" data-vi>Bài viết</a><a href="blog.html" class="nav-en" data-en>Blog</a>
+      <a href="contact.html" class="nav-vi" data-vi>Liên hệ</a><a href="contact.html" class="nav-en" data-en>Contact</a>
+    </nav>
+    <div class="lang-toggle">
+      <button id="btn-vi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow" data-vi>PHÒNG KHÁM</div>
+    <div class="eyebrow" data-en>CLINIC</div>
+    <h1 data-vi>Khám và điều trị dựa trên bằng chứng</h1>
+    <h1 data-en>Evidence-based diagnosis and treatment</h1>
+    <p class="lead" data-vi>Đội ngũ bác sĩ tại VITAL-Đại Nam kết hợp chuyên môn lâm sàng với các nghiên cứu mới nhất để đưa ra phác đồ điều trị phù hợp với từng bệnh nhân.</p>
+    <p class="lead" data-en>Our clinicians combine hands-on practice with the latest research to build treatment plans tailored to each patient.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-vi>Chuyên khoa</h2>
+      <h2 data-en>Specialties</h2>
+      <p data-vi>Danh sách sẽ được cập nhật khi đội ngũ chuyên môn hoàn thiện.</p>
+      <p data-en>This list will grow as our clinical team is finalized.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">01</span>
+        <h3 data-vi>Nội tổng quát</h3>
+        <h3 data-en>General internal medicine</h3>
+        <p data-vi>Khám sức khỏe định kỳ, tầm soát và quản lý bệnh mạn tính.</p>
+        <p data-en>Routine checkups, screening, and chronic disease management.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">02</span>
+        <h3 data-vi>Tim mạch</h3>
+        <h3 data-en>Cardiology</h3>
+        <p data-vi>Đánh giá và theo dõi sức khỏe tim mạch.</p>
+        <p data-en>Cardiovascular assessment and ongoing monitoring.</p>
+      </div>
+      <div class="pillar">
+        <span class="num">03</span>
+        <h3 data-vi>Dinh dưỡng lâm sàng</h3>
+        <h3 data-en>Clinical nutrition</h3>
+        <p data-vi>Tư vấn dinh dưỡng cá nhân hóa dựa trên mục tiêu sức khỏe.</p>
+        <p data-en>Personalized nutrition guidance based on your health goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-row">
+      <a href="assessment.html" class="btn btn-primary" data-vi>Nhận kế hoạch sức khỏe</a>
+      <a href="assessment.html" class="btn btn-primary" data-en>Get your health plan</a>
+      <a href="contact.html" class="btn btn-secondary" data-vi>Đặt lịch tư vấn</a>
+      <a href="contact.html" class="btn btn-secondary" data-en>Book a consultation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 VITAL-Đại Nam</div>
+    <div class="footer-links">
+      <a href="#" data-vi>Chính sách bảo mật</a><a href="#" data-en>Privacy policy</a>
+      <a href="#" data-vi>Điều khoản</a><a href="#" data-en>Terms</a>
+      <a href="https://dainam.edu.vn/vi" target="_blank" data-vi>Đại học Đại Nam ↗</a>
+      <a href="https://dainam.edu.vn/en" target="_blank" data-en>Dai Nam University ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+
+</body>
+</html>

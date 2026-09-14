@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài viết | VITAL-Đại Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo-block">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="10" fill="#E8791A"/>
+        <g stroke="#E8791A" stroke-width="2" stroke-linecap="round">
+          <line x1="20" y1="2" x2="20" y2="7"/>
+          <line x1="20" y1="33" x2="20" y2="38"/>
+          <line x1="2" y1="20" x2="7" y2="20"/>
+          <line x1="33" y1="20" x2="38" y2="20"/>
+          <line x1="7.5" y1="7.5" x2="10.8" y2="10.8"/>
+          <line x1="29.2" y1="29.2" x2="32.5" y2="32.5"/>
+          <line x1="32.5" y1="7.5" x2="29.2" y2="10.8"/>
+          <line x1="10.8" y1="29.2" x2="7.5" y2="32.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="logo">VITAL<span>—</span>Đại Nam</div>
+        <div class="logo-sub" data-vi>Trực thuộc Đại học Đại Nam</div>
+        <div class="logo-sub" data-en>Affiliated with Dai Nam University</div>
+      </div>
+    </a>
+    <nav>
+      <a href="assessment.html" class="nav-vi" data-vi>Kế hoạch sức khỏe</a><a href="assessment.html" class="nav-en" data-en>Health plan</a>
+      <a href="clinic.html" class="nav-vi" data-vi>Phòng khám</a><a href="clinic.html" class="nav-en" data-en>Clinic</a>
+      <a href="research.html" class="nav-vi" data-vi>Nghiên cứu</a><a href="research.html" class="nav-en" data-en>Research</a>
+      <a href="blog.html" class="nav-vi active" data-vi>Bài viết</a><a href="blog.html" class="nav-en active" data-en>Blog</a>
+      <a href="contact.html" class="nav-vi" data-vi>Liên hệ</a><a href="contact.html" class="nav-en" data-en>Contact</a>
+    </nav>
+    <div class="lang-toggle">
+      <button id="btn-vi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow" data-vi>BẢN TIN NGHIÊN CỨU</div>
+    <div class="eyebrow" data-en>RESEARCH DIGEST</div>
+    <h1 data-vi>Bản tin nghiên cứu</h1>
+    <h1 data-en>Research digest</h1>
+    <p class="lead" data-vi>Đội ngũ dùng công cụ AI để theo dõi và tóm tắt y văn mới nhất — mỗi bài đều dẫn nguồn gốc khoa học và được đội ngũ kiểm chứng trước khi đăng.</p>
+    <p class="lead" data-en>Our team uses AI tools to track and summarize the latest literature — every post links back to its source and is reviewed by our team before publishing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="blog-grid">
+      <div class="post">
+        <div class="meta">
+          <span data-vi>12 Tháng 9, 2026</span><span data-en>September 12, 2026</span>
+          <span class="tag tag-ai" data-vi>Tóm tắt bởi AI</span><span class="tag tag-ai" data-en>AI-assisted summary</span>
+          <span class="tag tag-topic" data-vi>Tầm soát</span><span class="tag tag-topic" data-en>Screening</span>
+        </div>
+        <h3 data-vi>Vì sao tầm soát sớm đang thay đổi kết quả điều trị</h3>
+        <h3 data-en>Why early screening is changing outcomes</h3>
+        <p data-vi>Một phân tích ngắn về dữ liệu tầm soát gần đây và ý nghĩa lâm sàng, do đội ngũ tổng hợp và kiểm chứng từ các công bố khoa học...</p>
+        <p data-en>A short look at recent screening data and what it means in practice, drafted with AI assistance and reviewed against the source publications by our team...</p>
+        <a href="#" class="source-link" data-vi>Xem nguồn trích dẫn →</a>
+        <a href="#" class="source-link" data-en>View cited sources →</a>
+      </div>
+      <div class="post">
+        <div class="meta">
+          <span data-vi>5 Tháng 9, 2026</span><span data-en>September 5, 2026</span>
+          <span class="tag tag-ai" data-vi>Tóm tắt bởi AI</span><span class="tag tag-ai" data-en>AI-assisted summary</span>
+          <span class="tag tag-topic" data-vi>Nghiên cứu hợp tác</span><span class="tag tag-topic" data-en>Collaborative study</span>
+        </div>
+        <h3 data-vi>Ghi chú từ nghiên cứu hợp tác quý này</h3>
+        <h3 data-en>Notes from this quarter's collaborative study</h3>
+        <p data-vi>Cập nhật tiến độ và những phát hiện ban đầu, được đội ngũ nghiên cứu biên soạn và xác minh kỹ lưỡng...</p>
+        <p data-en>Progress and early findings from our ongoing partnership project, compiled and fact-checked by our research team...</p>
+        <a href="#" class="source-link" data-vi>Xem nguồn trích dẫn →</a>
+        <a href="#" class="source-link" data-en>View cited sources →</a>
+      </div>
+      <div class="post">
+        <div class="meta">
+          <span data-vi>29 Tháng 8, 2026</span><span data-en>August 29, 2026</span>
+          <span class="tag tag-topic" data-vi>Phòng khám</span><span class="tag tag-topic" data-en>Clinic</span>
+        </div>
+        <h3 data-vi>Câu hỏi thường gặp trước buổi tư vấn đầu tiên</h3>
+        <h3 data-en>Common questions before your first visit</h3>
+        <p data-vi>Những điều bệnh nhân nên chuẩn bị trước buổi khám đầu tiên...</p>
+        <p data-en>What to prepare before your first appointment with us...</p>
+        <a href="#" class="source-link" data-vi>Đọc thêm →</a>
+        <a href="#" class="source-link" data-en>Read more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 VITAL-Đại Nam</div>
+    <div class="footer-links">
+      <a href="#" data-vi>Chính sách bảo mật</a><a href="#" data-en>Privacy policy</a>
+      <a href="#" data-vi>Điều khoản</a><a href="#" data-en>Terms</a>
+      <a href="https://dainam.edu.vn/vi" target="_blank" data-vi>Đại học Đại Nam ↗</a>
+      <a href="https://dainam.edu.vn/en" target="_blank" data-en>Dai Nam University ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+
+</body>
+</html>
